@@ -20,15 +20,15 @@
   var photonData = [];
   $.ajax({
     type: "GET",
-    url: "https://api.particle.io/v1/devices/260039000647353138383138/LED/?access_token=576b6dc57eaca48154dbf3a2",
-    dataType: 'jsonp',
-    success: parseQuote(theQuote)
+    url: "https://api.particle.io/v1/devices/260039000647353138383138/LED/?access_token=3ce29c9f91e04f3d3fb771e655b1ff07ec8c24eb",
+    dataType: 'json',
+    success: parsePhoton(photonData)
   });
 }
  
- function parseQuote(theQuote) {
-  document.getElementById("quote").innerHTML = theQuote.quoteText;
-  document.getElementById("author").innerHTML = theQuote.quoteAuthor;
+ function parseQuote(photonData) {
+  document.getElementById("name").innerHTML = photonData.name;
+  document.getElementById("result").innerHTML = photonData.result;
 }
  
 $(document).ready(function() {
@@ -63,6 +63,12 @@ $(document).ready(function() {
 		<section>
 			<div class = "photonInfo">
 			photon info here
+			</div>
+			<div class = "name">
+			name here
+			</div>
+			<div class = "result">
+			result here
 			</div>
 			
 			<button id = "getPhoton">
