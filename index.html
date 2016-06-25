@@ -17,6 +17,7 @@
 
  <script>
  var off = "off";
+ var on = "on";
  
  function getPhoton() {
   $.getJSON("https://api.particle.io/v1/devices/260039000647353138383138/LED/?access_token=3ce29c9f91e04f3d3fb771e655b1ff07ec8c24eb",function(json) {
@@ -48,6 +49,7 @@
 $(document).ready(function() {
 	$("#getPhoton").on("click", getPhoton);
 	$("#turnItOff").on("click", turnItOff(off));
+	$("#turnItOn").on("click"), turnItOff(on));
 });
 </script>
 
@@ -101,9 +103,26 @@ $(document).ready(function() {
 			</div>
 			
 			<button id = "turnItOff">
-			my button
+			off button
 			</button>
 		</section>
+		
+		<section>
+			<div class = "photonInfo">
+			photon info here
+			</div>
+			<div id = "name">
+			name here
+			</div>
+			<div id = "result">
+			result here
+			</div>
+			
+			<button id = "turnItOn">
+			on button
+			</button>
+		</section>
+		
         <hr>
 
         <section id="main_content">
