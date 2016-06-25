@@ -24,8 +24,8 @@
 		});
 		}
   
-  function turnItOff() {
-  $.post("https://api.particle.io/v1/devices/260039000647353138383138/turnItOff/",{params: "off", access_token=3ce29c9f91e04f3d3fb771e655b1ff07ec8c24eb});
+  function turnItOff(off) {
+  $.post("https://api.particle.io/v1/devices/260039000647353138383138/turnItOff/",{params: off, access_token=3ce29c9f91e04f3d3fb771e655b1ff07ec8c24eb});
   }
   
 	 /* 
@@ -45,7 +45,7 @@
  */
 $(document).ready(function() {
 	$("#getPhoton").on("click", getPhoton);
-	$("turnItOff").on("click", turnItOff);
+	$("turnItOff").on("click", turnItOff(off);
 });
 </script>
 
