@@ -24,7 +24,9 @@
 		});
 		}
   
-  
+  function turnItOff() {
+  $.post("https://api.particle.io/v1/devices/260039000647353138383138/turnItOff/",{params: "off", access_token=3ce29c9f91e04f3d3fb771e655b1ff07ec8c24eb});
+  }
   
 	 /* 
 	  $.ajax({
@@ -43,6 +45,7 @@
  */
 $(document).ready(function() {
 	$("#getPhoton").on("click", getPhoton);
+	$("turnItOff").on("click", turnItOff);
 });
 </script>
 
@@ -80,6 +83,22 @@ $(document).ready(function() {
 			</div>
 			
 			<button id = "getPhoton">
+			my button
+			</button>
+		</section>
+		
+		<section>
+			<div class = "photonInfo">
+			photon info here
+			</div>
+			<div id = "name">
+			name here
+			</div>
+			<div id = "result">
+			result here
+			</div>
+			
+			<button id = "turnItOff">
 			my button
 			</button>
 		</section>
